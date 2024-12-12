@@ -64,10 +64,10 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files configuration
-STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'seagull' / 'static']
+# Static files
+STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'seagull' / 'static', ]
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
-
+STATIC_ROOT = BASE_DIR / 'seagull' / 'seagull' / 'staticfiles_build' / 'static'  # For collectstatic
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
