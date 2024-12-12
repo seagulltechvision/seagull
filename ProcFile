@@ -1,1 +1,1 @@
-web: gunicorn seagull.wsgi:application
+web: gunicorn seagull.wsgi
