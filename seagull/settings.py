@@ -3,9 +3,8 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-# SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'lVZ9382dGb_Ksix6hjZQrB2hAjyR3LcXVcWdxHrug3zp0QGUNtpMXQ2TeTNadBhSXN0')  # Use environment variable for production
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Use environment variable for production
 # DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
-SECRET_KEY = 'lVZ9382dGb_Ksix6hjZQrB2hAjyR3LcXVcWdxHrug3zp0QGUNtpMXQ2TeTNadBhSXN0'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']  # Adjust for production with specific domains
@@ -27,7 +26,6 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'seagull.urls'
@@ -71,11 +69,16 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+
+# Directories where static files are located
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATICFILES_DIRS = [BASE_DIR / 'static', BASE_DIR / 'app' / 'static',]
+STATICFILES_DIRS = [BASE_DIR / "app" / "static"]
+STATIC_ROOT = BASE_DIR / "staticfiles_build" 
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 # STATIC_URL = '/static/'
 # STATICFILES_DIRS = [
 #     BASE_DIR / "static",  # For project-wide static files
@@ -92,7 +95,6 @@ EMAIL_PORT = 587
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
 EMAIL_HOST_USER = 'seagulltechhr@gmail.com'
-EMAIL_HOST_PASSWORD = 'jjti qzws zrig xnje'
-# EMAIL_HOST_PASSWORD = os.getenv('jjti qzws zrig xnje')  # Load password from environment
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Load password from environment
 DEFAULT_FROM_EMAIL = 'seagulltechhr@gmail.com'
 ADMIN_EMAIL = 'seagulltechhr@gmail.com'
