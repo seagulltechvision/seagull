@@ -69,12 +69,11 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
-STATICFILES_DIRS = [BASE_DIR / 'seagull/static',]
-# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
-STATIC_URL = '/static/'  # URL to access static files
+STATICFILES_DIRS = [BASE_DIR / 'seagull/static']
 
-# Ensure this points to the correct location where static files will be stored for serving
-STATIC_ROOT = os.path.join(BASE_DIR, 'seagull' , 'staticfiles_build')
+# Collect static files into this directory (for production)
+STATIC_ROOT = BASE_DIR / 'staticfiles_build'  # Path where collected files should be stored
+STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_URL = '/static/'
