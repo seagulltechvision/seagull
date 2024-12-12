@@ -74,12 +74,13 @@ WSGI_APPLICATION = 'seagull.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
-}
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
+DATABASES = {}
 
 
 # Password validation
@@ -124,28 +125,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-# For development
-# EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
-
-#For production
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-# EMAIL_HOST = 'smtp.gmail.com'
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'neelrajsinhzala27@gmail.com'
-# EMAIL_HOST_PASSWORD = 'onfk fvkm ahzm ghsj'
-
-# Email settings
-# EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'  # Use SMTP backend
-# EMAIL_HOST = 'smtp.gmail.com'  # Example for Gmail SMTP
-# EMAIL_PORT = 587
-# EMAIL_USE_TLS = True
-# EMAIL_HOST_USER = 'neelrajsinhzala27@gmail.com'  # Your email address
-# EMAIL_HOST_PASSWORD = ''  # Your email password
-# DEFAULT_FROM_EMAIL = 'onfk fvkm ahzm ghsj'
-# ADMIN_EMAIL = 'neelrajsinhzala27@gmail.com'  # Replace with your email
-
 import os
 
 # Email settings
