@@ -3,8 +3,9 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Use environment variable for production
+# SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Use environment variable for production
 # DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+SECRET_KEY = 'lVZ9382dGb_Ksix6hjZQrB2hAjyR3LcXVcWdxHrug3zp0QGUNtpMXQ2TeTNadBhSXN0'
 DEBUG = True
 
 ALLOWED_HOSTS = ['*']  # Adjust for production with specific domains
@@ -17,6 +18,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'app',
+    'whitenoise.runserver_nostatic'
 ]
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -64,34 +66,17 @@ TIME_ZONE = 'UTC'
 USE_I18N = True
 USE_TZ = True
 
-# Static files configuration
-# STATICFILES_DIRS = [BASE_DIR / 'static',  BASE_DIR / "app/static"]
-# STATIC_URL = '/static/'
-# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
-
-# STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
-# Directories where static files are located
-# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"  # Use ManifestStaticFilesStorage for production
 STATIC_URL = '/static/'  # URL for static files
 
-# Directories where static files are stored during development
-STATICFILES_DIRS = [
-    BASE_DIR / "app/static",  # Adjust if needed
-]
+if os.environ.get('VERCEL'):
+    STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
+else:
+    STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
+    STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
-# Destination for collectstatic (in production, you might change this path)
-STATIC_ROOT = BASE_DIR / "staticfiles"  # Renaming for consistency
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-# STATIC_URL = '/static/'
-# STATICFILES_DIRS = [
-#     BASE_DIR / "static",  # For project-wide static files
-#     BASE_DIR / "app/static",  # For app-specific static files
-# ]
-# STATIC_ROOT = BASE_DIR / 'staticfiles_build'  # Directory for `collectstatic` to use in production
-
+# STATIC_URL = os.path.join(BASE_DIR, 'app/static')
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 # Email settings
