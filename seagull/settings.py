@@ -65,9 +65,18 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files configuration
-STATICFILES_DIRS = [BASE_DIR / 'static',  BASE_DIR / "app/static"]
-STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
+# STATICFILES_DIRS = [BASE_DIR / 'static',  BASE_DIR / "app/static"]
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
+
+STATICFILES_DIRS = [
+    BASE_DIR / 'seagull' / 'static',  # Static files directory where your app's static files are located
+]
+
+STATIC_URL = '/static/'  # URL to access static files
+
+# Ensure this points to the correct location where static files will be stored for serving
+STATIC_ROOT = os.path.join(BASE_DIR, 'seagull' , 'staticfiles_build')
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_URL = '/static/'
