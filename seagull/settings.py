@@ -26,6 +26,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
 ]
 
 ROOT_URLCONF = 'seagull.urls'
@@ -69,13 +70,18 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-
 # Directories where static files are located
-STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "app" / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles_build" 
+# STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"  # Use ManifestStaticFilesStorage for production
+STATIC_URL = '/static/'  # URL for static files
 
+# Directories where static files are stored during development
+STATICFILES_DIRS = [
+    BASE_DIR / "app/static",  # Adjust if needed
+]
+
+# Destination for collectstatic (in production, you might change this path)
+STATIC_ROOT = BASE_DIR / "staticfiles"  # Renaming for consistency
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -94,7 +100,7 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = False
 EMAIL_USE_SSL = True
-EMAIL_HOST_USER = 'seagulltechhr@gmail.com'
-EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD')  # Load password from environment
+EMAIL_HOST_USER = os.getenv('EMAIL_HOST_USER', 'default_email@example.com')
+EMAIL_HOST_PASSWORD = os.getenv('EMAIL_HOST_PASSWORD', 'default_password')
 DEFAULT_FROM_EMAIL = 'seagulltechhr@gmail.com'
 ADMIN_EMAIL = 'seagulltechhr@gmail.com'
