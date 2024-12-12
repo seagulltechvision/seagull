@@ -18,7 +18,6 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app',
 ]
-
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -69,10 +68,9 @@ USE_TZ = True
 # STATIC_URL = '/static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
-STATICFILES_DIRS = [
-    BASE_DIR / 'seagull' / 'static',  # Static files directory where your app's static files are located
-]
-
+# STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
+STATICFILES_DIRS = [BASE_DIR / 'seagull/static',]
+# STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.ManifestStaticFilesStorage'
 STATIC_URL = '/static/'  # URL to access static files
 
 # Ensure this points to the correct location where static files will be stored for serving
