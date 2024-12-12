@@ -64,7 +64,7 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files configuration
-STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static']
+STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'seagull' / 'static']
 STATIC_URL = '/static/'
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")
 
