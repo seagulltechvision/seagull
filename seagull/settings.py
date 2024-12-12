@@ -71,11 +71,13 @@ USE_TZ = True
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
 
 # Directories where static files are located
-STATICFILES_DIRS = [BASE_DIR / 'seagull/static']
+STATICFILES_DIRS = [
+    BASE_DIR / "app/static",
+]
 
 # Path to store collected static files (for production)
 STATIC_ROOT = BASE_DIR / 'staticfiles_build'
-
+STATICFILES_STORAGE = "django.contrib.staticfiles.storage.OverwriteStorage"
 # URL for static files
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
