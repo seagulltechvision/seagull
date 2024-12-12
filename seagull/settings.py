@@ -5,6 +5,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Use environment variable for production
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
+# DEBUG = True
 
 ALLOWED_HOSTS = ['*']  # Adjust for production with specific domains
 
@@ -64,11 +65,18 @@ USE_I18N = True
 USE_TZ = True
 
 # Static files configuration
-STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'seagull' / 'static']
+# STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'seagull' / 'static']
+# STATIC_URL = '/static/'
+# STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")  # Ensure this is correct
+# MEDIA_URL = '/media/'
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
 STATIC_URL = '/static/'
-STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build", "static")  # Ensure this is correct
-MEDIA_URL = '/media/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+STATICFILES_DIRS = [
+    BASE_DIR / "static",  # For project-wide static files
+    BASE_DIR / "app/static",  # For app-specific static files
+]
+STATIC_ROOT = BASE_DIR / 'staticfiles_build'  # Directory for `collectstatic` to use in production
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
