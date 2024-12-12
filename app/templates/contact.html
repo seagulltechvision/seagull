@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8"/>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<!-- Site Metas -->
+		<meta name="description" content="SeaGull TechVision - Transforming Ideas into Impactful Technology with innovative IT solutions. Contact us today!">
+		<meta name="keywords" content="IT Solutions, Software Development, Internship, Web Development, SeaGull TechVision">
+		<meta name="author" content="SeaGull TechVision">
+		<title>SeaGull - Contact Us</title>
+		{% load static %}
+		<!-- slider stylesheet -->
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+		<!-- Font Awesome CDN -->
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<!-- bootstrap core css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+		<!-- Custom styles for this template -->
+		<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+		<!-- responsive style -->
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
+		<link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQ72bo9QMlKm1f+7rpvYz5Xou0dCRv2PTXTTrVcK9GCDTC0xDmBQA8uOw" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+		<!-- Bootstrap Bundle with Popper -->
+	</head>
+	<body>
+		<div class="hero_area">
+			<!-- Header Section -->
+			<header class="header_section">
+				<div class="container-fluid">
+					<nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+						<a class="navbar-brand" href="{% url 'index' %}">
+							<span>
+								<img src="{% static './images/logo.jpg' %}" alt="SeaGull" style="border-radius: 40px;" height="75px" width="auto">
+							</span>
+						</a>
+						<!-- Toggle button for mobile view -->
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<!-- Navbar links -->
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ms-auto text-center"> <!-- 'ms-auto' aligns items to the right -->
+								<li class="nav-item active">
+									<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'about' %}">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'do' %}">What we do</a>
+								</li>
+								<!-- Career Dropdown -->
+								<li class="nav-item">
+									<a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSctaCAeuRfumv8zUhnN_B01vspVZANHPKnmPsU8olS13TiuVg/viewform?usp=dialog">Apply Now for Internship</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+		</div>
+		<!-- end header section -->
+		<!-- contact section -->
+		<section class="contact_section layout_padding" style="padding: 50px 15px; background-color: #f7f9fc; border-radius: 8px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); margin: 0 auto;">
+			<div class="container">
+				<!-- Inquiry Heading inside the same column as the form -->
+				<div class="heading_container2" style="text-align: center; margin-bottom: 30px;   display: flex; justify-content: center; align-items: center; flex-direction: column; text-align: center; width: 100%;">
+					<center>
+						<h2 style="font-size: 32px; color: #003366; margin-bottom: 30px; font-weight: bold; position: relative; font-size: 2rem; font-weight: bold; text-align: center; margin-bottom: 20px;">REQUEST A CALLBACK</h2>
+					</center>
+					<div style="width: 50px; height: 3px; background-color: #003366; margin: 10px auto; border-radius: 1px;"></div>
+				</div>
+				<div class="contact-form" style="max-width: 800px; margin: 0 auto; font-size: 16px; color: #333; font-weight: 500; margin-bottom: 8px; border: 1px solid #ccc; border-radius: 4px; padding: 10px 12px; font-size: 14px; transition: all 0.3s ease; box-shadow: none; border-color: #003366; box-shadow: 0 0 5px rgba(0, 51, 102, 0.2); color: #003366; cursor: pointer;">
+					<!-- Send data to Django's view -->
+					<form method="POST" action="">
+						{% csrf_token %}
+						<div class="row g-3" style=" margin-bottom: 15px;">
+							<div class="col-md-6" style=" margin-bottom: 15px;">
+								<label for="full_name" class="form-label" style="font-size: 16px; color: #333; font-weight: 500; margin-bottom: 8px; cursor: pointer;">Full Name</label>
+								<input type="text" name="full_name" id="full_name" placeholder="Enter your full name" class="form-control" style="border: 1px solid #ccc; border-radius: 4px; padding: 10px 12px; font-size: 14px; transition: all 0.3s ease; box-shadow: none;" onfocus="this.style.borderColor='#003366'; this.style.boxShadow='0 0 5px rgba(0, 51, 102, 0.2)';" onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';"/>
+							</div>
+							<div class="col-md-6">
+								<label for="phone" class="form-label" style="font-size: 16px; color: #333; font-weight: 500; margin-bottom: 8px; cursor: pointer;">Phone Number</label>
+								<input type="text" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" pattern="[0-9]{10}" required style="border: 1px solid #ccc; border-radius: 4px; padding: 10px 12px; font-size: 14px; transition: all 0.3s ease; box-shadow: none;" onfocus="this.style.borderColor='#003366'; this.style.boxShadow='0 0 5px rgba(0, 51, 102, 0.2)';" onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';"/>
+							</div>
+							<div class="col-md-6">
+								<form>
+									<label for="email" class="form-label" style="font-size: 16px; color: #333; font-weight: 500; margin-bottom: 8px; cursor: pointer;">Email Address</label>
+									<input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required style="border: 1px solid #ccc; border-radius: 4px; padding: 10px 12px; font-size: 14px; transition: all 0.3s ease; box-shadow: none;" onfocus="this.style.borderColor='#003366'; this.style.boxShadow='0 0 5px rgba(0, 51, 102, 0.2)';" onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';" oninput="validateEmailInline(this)"/>
+									<div id="emailError" style="color: red; font-size: 12px; margin-top: 5px;"></div>
+								</form>
+							</div>
+							<div class="col-12">
+								<label for="message" class="form-label" style="font-size: 16px; color: #333; font-weight: 500; margin-bottom: 8px; cursor: pointer;">Message</label>
+								<textarea id="message" name="message" class="form-control" rows="4" placeholder="Your message" required style="border: 1px solid #ccc; border-radius: 4px; padding: 10px 12px; font-size: 14px; transition: all 0.3s ease; box-shadow: none; resize: none;" onfocus="this.style.borderColor='#003366'; this.style.boxShadow='0 0 5px rgba(0, 51, 102, 0.2)';" onblur="this.style.borderColor='#ccc'; this.style.boxShadow='none';" oninput="validateMessageInline(this)"></textarea>
+							</div>
+							<div class="col-12 text-center">
+								<button type="submit" class="btn btn-primary" style="background-color: #003366; font-size: 16px; font-weight: bold; padding: 12px 25px; border: none; border-radius: 4px; color: white; cursor: pointer; transition: background-color 0.3s ease;" onmouseover="this.style.backgroundColor='#002244';" onmouseout="this.style.backgroundColor='#003366';">Send</button>
+							</div>
+						</div>
+					</form>
+				</div>
+			</div>
+		</section>
+		<!-- end contact section -->
+		<section class="info_section" style="padding: 50px 0; background-color: #232323;">
+			<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+				<div class="info_info col-md-6" style="margin-bottom: 30px; text-align: left;">
+					<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Information</h5>
+					<p style="font-size: 1rem; color: #f7f9fc; line-height: 1.6; margin: 0;">
+						At Seagull Tech Vision, we craft innovative AI, web development, and scalable software solutions tailored to client needs.
+					</p>
+				</div>
+				<div class="info_insta col-md-6" style="text-align: right;"> <!-- Align to the right -->
+					<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Social Media</h5>
+					<div class="insta_container" style="display: flex; gap: 15px; justify-content: flex-end;"> <!-- Align icons to the right -->
+						<a href="https://www.instagram.com/seagull_tech_vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #E1306C; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fab fa-instagram" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+						<a href="https://www.linkedin.com/company/seagull-tech-vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #0077b5; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fab fa-linkedin" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+						<a href="mailto:seagulltechhr@gmail.com" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #0078D4; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fas fa-envelope" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end info_section -->
+		<!-- Footer Section -->
+		<footer>
+			<div class="container text-center">
+				<p>&copy; 2024 All Rights Reserved By <a href="{% url 'index' %}" class="text-warning">SeaGull TechVision</a></p>
+			</div>
+		</footer>
+		<!-- footer section -->
+		<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+		<script>
+			function validateEmailInline(input) {
+	const emailError = document.getElementById("emailError");
+	const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+	if (input.value === "" || emailPattern.test(input.value)) {
+	emailError.textContent = ""; // Valid email or empty input
+	input.style.borderColor = "#ccc";
+	} else {
+	emailError.textContent = "Invalid email address.";
+	input.style.borderColor = "red";
+	}
+	}
+		</script>
+	</body>
+</html>

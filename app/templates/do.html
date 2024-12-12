@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Basic -->
+		<meta charset="utf-8"/>
+		<!-- Mobile Metas -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<!-- Site Metas -->
+		<meta name="description" content="SeaGull TechVision - Transforming Ideas into Impactful Technology with innovative IT solutions. Contact us today!">
+		<meta name="keywords" content="IT Solutions, Software Development, Internship, Web Development, SeaGull TechVision">
+		<meta name="author" content="SeaGull TechVision">
+		<title>SeaGull - What We Do</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<!-- bootstrap core css -->
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+		<!-- Custom styles for this template -->
+		<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+		<!-- responsive style -->
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
+		<link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQ72bo9QMlKm1f+7rpvYz5Xou0dCRv2PTXTTrVcK9GCDTC0xDmBQA8uOw" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+		<!-- Bootstrap Bundle with Popper -->
+	</head>
+		<body>
+			<div class="hero_area">
+				<!-- Header Section -->
+				<header class="header_section">
+					<div class="container-fluid">
+						<nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+							<a class="navbar-brand" href="{% url 'index' %}">
+								<span>
+									<img src="{% static './images/logo.jpg' %}" alt="SeaGull" style="border-radius: 40px;" height="75px" width="auto">
+								</span>
+							</a>
+							<!-- Toggle button for mobile view -->
+							<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+								<span class="navbar-toggler-icon"></span>
+							</button>
+							<!-- Navbar links -->
+							<div class="collapse navbar-collapse" id="navbarSupportedContent">
+								<ul class="navbar-nav ms-auto text-center"> <!-- 'ms-auto' aligns items to the right -->
+									<li class="nav-item active">
+										<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'about' %}">About</a>
+									</li>
+									<!-- Career Dropdown -->
+									<li class="nav-item">
+										<a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSctaCAeuRfumv8zUhnN_B01vspVZANHPKnmPsU8olS13TiuVg/viewform?usp=dialog">Apply Now for Internship</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'portfolio' %}">Portfolio</a>
+									</li>
+									<li class="nav-item">
+										<a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+					</div>
+				</header>
+				<!-- end header section -->
+			</div>
+			<!-- do section -->
+			<section class="do_section layout_padding">
+				<div class="container">
+					<div class="heading_container">
+						<h2>What We Do</h2>
+						<p>At Seagull Tech.Point, we specialize in delivering innovative IT solutions, driving software development, and supporting digital transformation. Our mission is to empower businesses with cutting-edge technologies and create opportunities for future talent through hands-on internships.</p>
+					</div>
+					<br><br><br>
+					<div class="heading_container" style="text-align: left; gap: 10px;">
+						<h2>What We Offer in Our Internship Program</h2>
+						<p>Our internship program is designed to build practical skills and provide real-world experience, ensuring you are ready to excel in the tech industry. Here's how:</p>
+						<ul>
+							<li>
+								<strong>Hands-On Training:</strong> Dive into real projects, gaining practical experience and learning by doing.
+							</li>
+							<li>
+								<strong>Technical Skills Development:</strong> Master in-demand technologies such as:
+								<ul>
+									<li style="list-style: lower-roman;"><strong>Python:</strong> Develop skills in data analysis, automation, and backend development.</li>
+									<li style="list-style: lower-roman;"><strong>HTML & CSS:</strong> Build and design responsive, user-friendly web interfaces.</li>
+									<li style="list-style: lower-roman;"><strong>JavaScript:</strong> Enhance web interactivity and functionality.</li>
+									<li style="list-style: lower-roman;"><strong>SQL:</strong> Learn how to manage and query databases effectively.</li>
+									<li style="list-style: lower-roman;"><strong>Version Control (Git):</strong> Collaborate seamlessly and manage your codebase with Git.</li>
+								</ul>
+							</li>
+							<li>
+								<strong>Mentorship:</strong> Receive guidance from experienced professionals who help you refine both technical and soft skills.
+							</li>
+							<li>
+								<strong>Professional Networking:</strong> Build connections with industry experts and peers to grow your career network.
+							</li>
+							<li>
+								<strong>Certification:</strong> Earn a certificate of completion to highlight your accomplishments and enhance your resume.
+							</li>
+							<li>
+								<strong>Career Support:</strong> Access resume-building advice, interview preparation tips, and career planning insights.
+							</li>
+						</ul>
+					</div>
+				</div>
+					<div class="do_container">
+						<!-- Python -->
+						<div class="box arrow-start arrow_bg">
+							<div class="img-box">
+								<a href="https://www.python.org/" target="_blank" rel="noopener">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/c/c3/Python-logo-notext.svg" alt="Python Logo" style="width: 50px; height: auto;">
+								</a>
+							</div>
+							<div class="detail-box">
+								<h6>Python</h6>
+							</div>
+						</div>
+						<!-- Web Development -->
+						<div class="box arrow-middle arrow_bg">
+							<div class="img-box">
+								<a href="https://www.freecodecamp.org/news/web-development/" target="_blank" rel="noopener">
+									<i class="fa-solid fa-code fa-3x" style="color: black;"></i>
+								</a>
+							</div>
+							<div class="detail-box">
+								<h6>Web Development</h6>
+							</div>
+						</div>
+						<!-- HTML5 -->
+						<div class="box arrow-middle arrow_bg">
+							<div class="img-box">
+								<a href="https://developer.mozilla.org/en-US/docs/Web/HTML" target="_blank" rel="noopener">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/6/61/HTML5_logo_and_wordmark.svg" alt="HTML5 Logo" style="width: 50px; height: auto;">
+								</a>
+							</div>
+							<div class="detail-box">
+								<h6>HTML5</h6>
+							</div>
+						</div>
+						<!-- CSS -->
+						<div class="box arrow-end arrow_bg">
+							<div class="img-box">
+								<a href="https://www.w3schools.com/css/" target="_blank" rel="noopener">
+									<img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/CSS3_logo_and_wordmark.svg" alt="CSS Logo" style="width: 50px; height: auto;">
+								</a>
+							</div>
+							<div class="detail-box">
+								<h6>CSS</h6>
+							</div>
+						</div>
+						<!-- JAVA -->
+						<div class="box">
+							<div class="img-box">
+								<a href="https://www.oracle.com/java/" target="_blank" rel="noopener">
+									<img src="https://upload.wikimedia.org/wikipedia/en/3/30/Java_programming_language_logo.svg" alt="Java Logo" style="width: 50px; height: auto;">
+								</a>
+							</div>
+							<div class="detail-box">
+								<h6>JAVA</h6>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end do section -->
+			<!-- client section -->
+			<section class="client_section" style="padding: 50px 0;">
+				<div class="container">
+					<div class="heading_container" style="text-align: center; margin-bottom: 30px;">
+						<h2 style="font-size: 2.5rem; font-weight: bold; color: #ffc104;">Success Stories</h2>
+						<h4 style="font-size: 1.2rem; color: #ffffff; margin-top: 10px;">
+							Our internship program has empowered many talented individuals to kickstart their careers in the tech industry. 
+							<br>Here are some inspiring stories from our alumni:
+						</h4>
+					</div>
+					<div class="carousel-wrap" style="margin: 0 auto; position: relative; color: #ffffff;">
+						<div class="owl-carousel" data-autoplay="true" data-nav="true" style="box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+							<div class="item">
+								<div class="box" style="background-color: lightsteelblue; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 20px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+									<div class="img-box" style="width: 60px;">
+										<img src="{% static 'images/user1.jpg' %}" alt="client 1" style="width: 100%;">
+									</div>
+									<div class="detail-box" style="margin-top: 35px; display: flex; flex-direction: column; align-items: center; color: #000;">
+										<h5 style="text-transform: uppercase; font-weight: bold; font-size: 18px; color: #FF6600;">Anisha Mehta<br></h5>
+										<img src="{% static 'images/quote.png' %}" alt="quote">
+										<p>"During my internship at Seagull Tech.Point, I got hands-on experience with Python and web development. The guidance from mentors was invaluable, and it helped me secure my dream job in software development!"</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box" style="background-color: lightsteelblue; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 20px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+									<div class="img-box" style="width: 60px;">
+										<img src="{% static 'images/user1.jpg' %}" alt="client 2" style="width: 100%;">
+									</div>
+									<div class="detail-box" style="margin-top: 35px; display: flex; flex-direction: column; align-items: center; color: #000;">
+										<h5 style="text-transform: uppercase; font-weight: bold; font-size: 18px; color: #FF6600;">Rahul Sharma<br></h5>
+										<img src="{% static 'images/quote.png' %}" alt="quote">
+										<p>"The real-world projects I worked on during my internship gave me a competitive edge. Learning SQL and Python was a game-changer, and I owe my success to the incredible team at Seagull Tech.Point."</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box" style="background-color: lightsteelblue; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 20px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+									<div class="img-box" style="width: 60px;">
+										<img src="{% static 'images/user1.jpg' %}" alt="client 3" style="width: 100%;">
+									</div>
+									<div class="detail-box" style="margin-top: 35px; display: flex; flex-direction: column; align-items: center; color: #000;">
+										<h5 style="text-transform: uppercase; font-weight: bold; font-size: 18px; color: #FF6600;">Priya Joshi <br></h5>
+										<img src="{% static 'images/quote.png' %}" alt="quote">
+										<p>"Seagull Tech.Point’s internship introduced me to the fundamentals of HTML, CSS, and JavaScript. Their personalized mentorship helped me transition from a beginner to a confident frontend developer."</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box" style="background-color: lightsteelblue; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 20px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+									<div class="img-box" style="width: 60px;">
+										<img src="{% static 'images/user1.jpg' %}" alt="client 3" style="width: 100%;">
+									</div>
+									<div class="detail-box" style="margin-top: 35px; display: flex; flex-direction: column; align-items: center; color: #000;">
+										<h5 style="text-transform: uppercase; font-weight: bold; font-size: 18px; color: #FF6600;">Arjun Verma<br></h5>
+										<img src="{% static 'images/quote.png' %}" alt="quote">
+										<p>"The exposure I gained during my internship inspired me to start my own tech company. I’m grateful for the opportunities and knowledge I received."</p>
+									</div>
+								</div>
+							</div>
+							<div class="item">
+								<div class="box" style="background-color: lightsteelblue; padding: 20px; display: flex; flex-direction: column; align-items: center; text-align: center; margin: 20px; box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);">
+									<div class="img-box" style="width: 60px;">
+										<img src="{% static 'images/user1.jpg' %}" alt="client 3" style="width: 100%;">
+									</div>
+									<div class="detail-box" style="margin-top: 35px; display: flex; flex-direction: column; align-items: center; color: #000;">
+										<h5 style="text-transform: uppercase; font-weight: bold; font-size: 18px; color: #FF6600;">Aarav Khanna <br></h5>
+										<img src="{% static 'images/quote.png' %}" alt="quote">
+										<p>"The hands-on projects and guidance I received during my internship at Seagull Tech.Point gave me the skills and confidence to kickstart my career in data science."</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end client section -->
+			<section class="do_section layout_padding">
+				<div class="heading_container" style="text-align: left; gap: 10px;">
+					<h2>Your Journey to Excellence</h2>
+					<p>Embark on a transformative internship experience, where every step takes you closer to achieving your career aspirations:</p>
+					<ul>
+						<li>
+							<strong>Step 1: Hands-On Exploration</strong>  
+							Dive into live projects and gain practical, real-world experience.
+						</li>
+						<li>
+							<strong>Step 2: Mastering Innovation</strong>  
+							Work with cutting-edge technologies in AI, data science, and web development.
+						</li>
+						<li>
+							<strong>Step 3: Guided by Experts</strong>  
+							Receive personalized mentorship from seasoned professionals.
+						</li>
+						<li>
+							<strong>Step 4: Discovering Industry Insights</strong>  
+							Understand how top IT companies tackle real-world challenges.
+						</li>
+						<li>
+							<strong>Step 5: Building Credentials</strong>  
+							Earn certifications to showcase your skills and amplify your resume.
+						</li>
+						<li>
+							<strong>Step 6: Growing Together</strong>  
+							Collaborate in dynamic teams to enhance teamwork and problem-solving abilities.
+						</li>
+						<li>
+							<strong>Step 7: Career Acceleration</strong>  
+							Unlock support for resume building, interview preparation, and beyond.
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- info section -->
+			<section class="info_section" style="padding: 50px 0; background-color: #232323;">
+				<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+					<div class="info_info col-md-6" style="margin-bottom: 30px; text-align: left;">
+						<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Information</h5>
+						<p style="font-size: 1rem; color: #f7f9fc; line-height: 1.6; margin: 0;">
+							At Seagull Tech Vision, we craft innovative AI, web development, and scalable software solutions tailored to client needs.
+						</p>
+					</div>
+					<div class="info_insta col-md-6" style="text-align: right;"> <!-- Align to the right -->
+						<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Social Media</h5>
+						<div class="insta_container" style="display: flex; gap: 15px; justify-content: flex-end;"> <!-- Align icons to the right -->
+							<a href="https://www.instagram.com/seagull_tech_vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+								<div class="insta-box" style="background-color: #E1306C; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+									<i class="fab fa-instagram" style="color: white; font-size: 20px;"></i>
+								</div>
+							</a>
+							<a href="https://www.linkedin.com/company/seagull-tech-vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+								<div class="insta-box" style="background-color: #0077b5; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+									<i class="fab fa-linkedin" style="color: white; font-size: 20px;"></i>
+								</div>
+							</a>
+							<a href="mailto:seagulltechhr@gmail.com" style="text-decoration: none;">
+								<div class="insta-box" style="background-color: #0078D4; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+									<i class="fas fa-envelope" style="color: white; font-size: 20px;"></i>
+								</div>
+							</a>
+						</div>
+					</div>
+				</div>
+			</section>
+			<!-- end info_section -->
+					
+					<!-- Footer Section -->
+					<footer>
+						<div class="container text-center">
+						<p>&copy; 2024 All Rights Reserved By <a href="{% url 'index' %}" class="text-warning">SeaGull TechVision</a></p>
+						</div>
+					</footer>
+				<!-- footer section -->
+			<!-- footer section -->
+			<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+			<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+			<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+			<!-- owl carousel script -->
+			<script type="text/javascript">
+				$(".owl-carousel").owlCarousel({
+					loop: true,
+					margin: 20,
+					nav: false,
+					dots: true,
+					center: true,
+					autoplay: true,
+					autoplayTimeout: 3000,
+					responsive: {
+						0: { items: 1 },
+						768: { items: 2 },
+						1200: { items: 3 }
+					}
+				});
+			</script>
+			<!-- end owl carousel script -->
+	</body>
+</html>

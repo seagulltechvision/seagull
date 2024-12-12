@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+		<meta name="description" content="SeaGull TechVision - Transforming Ideas into Impactful Technology with innovative IT solutions. Contact us today!">
+		<meta name="keywords" content="IT Solutions, Software Development, Internship, Web Development, SeaGull TechVision">
+		<meta name="author" content="SeaGull TechVision">
+		<title>SeaGull - Portfolio</title>
+		{% load static %}
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+		<link rel="stylesheet" type="text/css" href="{% static 'css/bootstrap.css' %}"/>
+		<link href="{% static 'css/style.css' %}" rel="stylesheet"/>
+		<link href="{% static 'css/responsive.css' %}" rel="stylesheet"/>
+		<link rel="icon" type="image/x-icon" href="{% static 'images/logo.png' %}"/>
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQ72bo9QMlKm1f+7rpvYz5Xou0dCRv2PTXTTrVcK9GCDTC0xDmBQA8uOw" crossorigin="anonymous">
+		<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+	</head>
+	<body>
+		<div class="hero_area">
+			<!-- header section strats -->
+			<header class="header_section">
+				<div class="container-fluid">
+					<nav class="navbar navbar-expand-lg custom_nav-container pt-3">
+						<a class="navbar-brand" href="{% url 'index' %}">
+							<span>
+								<img src="{% static './images/logo.jpg' %}" alt="SeaGull" style="border-radius: 40px;" height="75px" width="auto">
+							</span>
+						</a>
+						<!-- Toggle button for mobile view -->
+						<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<!-- Navbar links -->
+						<div class="collapse navbar-collapse" id="navbarSupportedContent">
+							<ul class="navbar-nav ms-auto text-center"> <!-- 'ms-auto' aligns items to the right -->
+								<li class="nav-item active">
+									<a class="nav-link" href="{% url 'index' %}">Home <span class="sr-only">(current)</span></a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'about' %}">About</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'do' %}">What we do</a>
+								</li>
+								<!-- Career Dropdown -->
+								<li class="nav-item">
+									<a class="nav-link" href="https://docs.google.com/forms/d/e/1FAIpQLSctaCAeuRfumv8zUhnN_B01vspVZANHPKnmPsU8olS13TiuVg/viewform?usp=dialog">Apply Now for Internship</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="{% url 'contact' %}">Contact us</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</header>
+			<!-- end header section -->
+		</div>
+		<!-- work section -->
+		<section class="work_section layout_padding">
+			<div class="container">
+				<div class="heading_container">
+					<h2>Creative Works</h2>
+					<p>At Seagull Tech.Point, we believe creativity is the cornerstone of innovation. Our creative projects are a fusion of cutting-edge technology and visionary thinking, resulting in unique solutions that push the boundaries of what's possible. From designing engaging user experiences to developing visually captivating applications, we thrive on bringing bold ideas to life.</p>
+				</div>
+				
+				<div class="work_container layout_padding2">
+					<div class="box b-1">
+						<img src="{% static 'images/w-1.png' %}" alt="Creative work example 1">
+					</div>
+					<div class="box b-2">
+						<img src="{% static 'images/w-2.png' %}" alt="Creative work example 2">
+					</div>
+					<div class="box b-3">
+						<img src="{% static 'images/w-3.png' %}" alt="Creative work example 3">
+					</div>
+					<div class="box b-4">
+						<img src="{% static 'images/w-4.png' %}" alt="Creative work example 4">
+					</div>
+				</div>
+				
+				<div class="heading_container">
+					<h2>Our Portfolio</h2>
+					<p>We take immense pride in delivering solutions that not only meet but exceed expectations. Here’s a glimpse into some of our most impactful projects:</p>
+				</div>
+				
+				<div class="portfolio_item">
+					<div class="heading_container">
+						<h3>1. Zidio Face Punching System</h3>
+					</div>
+					<p><strong>Client:</strong> Zidio Development <br>
+						<strong>Description:</strong> We developed an advanced facial recognition system aimed at enhancing security protocols. The solution utilizes AI and machine learning to provide accurate, real-time results. <br>
+						<strong>Key Technologies:</strong> Python, OpenCV, TensorFlow <br>
+						<strong>Impact:</strong> Improved system efficiency by 30%, ensuring seamless and reliable security operations.
+					</p>
+				</div>
+		
+				<div class="portfolio_item">
+					<div class="heading_container">
+						<h3>2. EduLearn LMS Platform</h3>
+					</div>
+					<p><strong>Client:</strong> EduLearn <br>
+						<strong>Description:</strong> We designed and built a user-friendly Learning Management System (LMS) tailored to educators and students. The platform promotes seamless interactions and learning experiences. <br>
+						<strong>Key Technologies:</strong> HTML, CSS, JavaScript, MySQL <br>
+						<strong>Impact:</strong> Empowered over 10,000 users, improving learning engagement and accessibility.
+					</p>
+				</div>
+		
+				<div class="portfolio_item">
+					<div class="heading_container">
+						<h3>3. FreshBites Mobile App</h3>
+					</div>
+					<p><strong>Client:</strong> FreshBites Cafe <br>
+						<strong>Description:</strong> We developed a custom mobile app for food ordering and delivery, with a focus on an intuitive and user-centric interface. <br>
+						<strong>Key Technologies:</strong> React Native, Firebase, APIs <br>
+						<strong>Impact:</strong> Increased customer satisfaction and boosted online orders by 40%.
+					</p>
+				</div>
+		
+				<br><br><br><br>
+				
+				<div class="heading_container">
+					<h2>Why Choose Us?</h2>
+					<p>Our portfolio is a testament to our ability to craft tailored IT solutions that address the unique needs of businesses across industries. Whether you're a startup or an established enterprise, we empower you with the technology and expertise to drive success.</p>
+				</div>
+			</div>
+		</section>
+		<!-- end work section -->
+		<section class="info_section" style="padding: 50px 0; background-color: #232323;">
+			<div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 15px;">
+				<div class="info_info col-md-6" style="margin-bottom: 30px; text-align: left;">
+					<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Information</h5>
+					<p style="font-size: 1rem; color: #f7f9fc; line-height: 1.6; margin: 0;">
+						At Seagull Tech Vision, we craft innovative AI, web development, and scalable software solutions tailored to client needs.
+					</p>
+				</div>
+				<div class="info_insta col-md-6" style="text-align: right;"> <!-- Align to the right -->
+					<h5 style="font-size: 1.5rem; color: #ffc107; font-weight: bold; margin-bottom: 10px;">Social Media</h5>
+					<div class="insta_container" style="display: flex; gap: 15px; justify-content: flex-end;"> <!-- Align icons to the right -->
+						<a href="https://www.instagram.com/seagull_tech_vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #E1306C; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fab fa-instagram" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+						<a href="https://www.linkedin.com/company/seagull-tech-vision/" rel="noopener" target="_blank" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #0077b5; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fab fa-linkedin" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+						<a href="mailto:seagulltechhr@gmail.com" style="text-decoration: none;">
+							<div class="insta-box" style="background-color: #0078D4; border-radius: 50%; padding: 12px; width: 40px; height: 40px; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: background-color 0.3s;">
+								<i class="fas fa-envelope" style="color: white; font-size: 20px;"></i>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- end info_section -->	
+		<!-- Footer Section -->
+		<footer>
+			<div class="container text-center">
+				<p>&copy; 2024 All Rights Reserved By <a href="{% url 'index' %}" class="text-warning">SeaGull TechVision</a></p>
+			</div>
+		</footer>
+		<!-- footer section -->
+		<script type="text/javascript" src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+		<script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+	</body>
+</html>
