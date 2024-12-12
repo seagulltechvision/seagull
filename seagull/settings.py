@@ -27,6 +27,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
 ]
 
 ROOT_URLCONF = 'seagull.urls'
@@ -70,11 +71,9 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
-STATICFILES_STORAGE = "django.contrib.staticfiles.storage.StaticFilesStorage"
-# Directories where static files are located
 STATIC_URL = '/static/'
-STATICFILES_DIRS = [BASE_DIR / "app" / "static"]
-STATIC_ROOT = BASE_DIR / "staticfiles_build"  # or wherever you want to collect the static files
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_DIRS = [BASE_DIR / 'static', BASE_DIR / 'app' / 'static',]
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # STATIC_URL = '/static/'

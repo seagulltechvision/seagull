@@ -1,28 +1,30 @@
 {
-
     "version": 2,
     "builds": [
-    {
-        "src": "seagull/wsgi.py",
+      {
+        "src": "manage.py",
         "use": "@vercel/python",
-        "config": { "maxLambdaSize": "15mb", "runtime": "python3.9.11" }
-    },
-    {
+        "config": { 
+          "maxLambdaSize": "15mb", 
+          "runtime": "python3.9" 
+        }
+      },
+      {
         "src": "build_files.sh",
         "use": "@vercel/static-build",
         "config": {
-        "distDir": "staticfiles_build"
+          "distDir": "staticfiles"  // Ensure this matches your STATIC_ROOT in settings.py
         }
-    }
+      }
     ],
     "routes": [
-    {
+      {
         "src": "/static/(.*)",
         "dest": "/static/$1"
-    },
-    {
+      },
+      {
         "src": "/(.*)",
         "dest": "seagull/wsgi.py"
-    }
+      }
     ]
-}  
+  }
