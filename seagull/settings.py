@@ -69,10 +69,14 @@ USE_TZ = True
 # STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles_build")  # Ensure this is correct
 
 # STATICFILES_DIRS = [BASE_DIR / 'seagull' / 'static',]
+
+# Directories where static files are located
 STATICFILES_DIRS = [BASE_DIR / 'seagull/static']
 
-# Collect static files into this directory (for production)
-STATIC_ROOT = BASE_DIR / 'staticfiles_build'  # Path where collected files should be stored
+# Path to store collected static files (for production)
+STATIC_ROOT = BASE_DIR / 'staticfiles_build'
+
+# URL for static files
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
