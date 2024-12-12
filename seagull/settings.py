@@ -3,7 +3,7 @@ import os
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'lVZ9382dGb_Ksix6hjZQrB2hAjyR3LcXVcWdxHrug3zp0QGUNtpMXQ2TeTNadBhSXN0')  # Use environment variable for production
+SECRET_KEY = os.getenv('DJANGO_SECRET_KEY', 'your-default-secret-key')  # Use environment variable for production
 DEBUG = os.getenv('DJANGO_DEBUG', 'False') == 'True'
 
 ALLOWED_HOSTS = ['*']  # Adjust for production with specific domains
